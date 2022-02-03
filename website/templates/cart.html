@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Cart</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Playfair Display", serif;
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.6),
+            rgba(0, 0, 0, 0.6)
+          ),
+          url("https://images.unsplash.com/photo-1530569112985-108dc2578ec2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjB8fGNoaW5lc2UlMjBmb29kfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60");
+        background-size: cover;
+        background-position: center;
+        font-size: 20px;
+        height: 200vh;
+        background-repeat: no-repeat;
+      }
+
+      .container {
+        margin-top: 100px;
+      }
+
+      .card {
+        position: relative;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        min-width: 0;
+        word-wrap: break-word;
+        background-color: transparent;
+        background-clip: border-box;
+        border: 0px solid transparent;
+        border-radius: 0px;
+      }
+
+      .card-body {
+        -webkit-box-flex: 1;
+        -ms-flex: 1 1 auto;
+        flex: 1 1 auto;
+        padding: 1.25rem;
+        text-align: center;
+      }
+
+      .card .card-title {
+        position: relative;
+        text-align: center;
+        font-weight: 600;
+        margin-bottom: 10px;
+        font-size: xx-large;
+      }
+
+      .table {
+        width: 100%;
+        max-width: 100%;
+        margin-bottom: 1rem;
+        background-color: transparent;
+      }
+
+      * {
+        outline: none;
+      }
+
+      .table th,
+      .table thead th {
+        font-weight: 500;
+      }
+
+      .table thead th {
+        vertical-align: bottom;
+        border-bottom: 2px solid #dee2e6;
+      }
+
+      .table th {
+        padding: 1rem;
+        vertical-align: top;
+        border-top: 1px solid #dee2e6;
+      }
+
+      .table th,
+      .table thead th {
+        font-weight: 500;
+      }
+
+      th {
+        text-align: inherit;
+      }
+
+      .m-b-20 {
+        margin-bottom: 20px;
+        color: black;
+      }
+
+      .customtable {
+        text-align: center;
+      }
+
+      .thead-light {
+        text-align: center;
+        background-color: black;
+        color: white;
+      }
+
+      .button1 {
+        background-color: black;
+        border-radius: 8px;
+        padding: 12px 28px;
+        color: white;
+        border: none;
+        text-decoration: none;
+      }
+
+      .button a:link,
+      a:visited,
+      a:active {
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+      }
+
+      .button2 {
+        background-color: black;
+        border-radius: 8px;
+        border-color: wheat;
+        padding: 10px 24px;
+        color: white;
+        border: none;
+        text-decoration: none;
+      }
+      .title {
+        text-align: center;
+        font-size: 40px;
+        color: wheat;
+        font-family: "Playfair Display", serif;
+        background: rgb(0, 0, 0, 0.5);
+        padding-top: 40px;
+      }
+
+      .navbar {
+        height: 150px;
+        line-height: 80px;
+        /*background-color: black;*/
+        font-size: 30px;
+        display: flex;
+        align-items: center;
+        padding: 5px;
+        justify-content: space-between;
+        padding: 0 40px;
+      }
+
+      nav {
+        flex: 1;
+        text-align: right;
+      }
+
+      nav ul {
+        display: inline;
+        list-style-type: none;
+      }
+
+      nav ul li {
+        display: inline-block;
+        margin-right: 20px;
+      }
+
+      a {
+        text-decoration: none;
+        color: wheat;
+        transition: 0.5s all ease;
+      }
+
+      ul li a:hover {
+        color: red;
+      }
+
+      .order-bttn {
+        position: absolute;
+        top: 100%;
+        left: 75%;
+        transform: translate(-50%, -50%);
+        color: wheat;
+        text-align: center;
+      }
+
+      button {
+        background: none;
+        border: 1px solid;
+        font-size: 20px;
+        padding: 8px 25px;
+        border-radius: 6px;
+        transition: 0.5s all ease;
+        color: wheat;
+      }
+
+      button:hover {
+        background: black;
+        color: red;
+      }
+
+      .menubutton {
+        position: absolute;
+        top: 100%;
+        left: 27%;
+        transform: translate(-50%, -50%);
+        color: wheat;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="logo">
+        <img
+          src="https://i.pinimg.com/736x/5e/7d/e9/5e7de9a9e7e8fbc0c74b19d26498a077.jpg"
+          width="100px"
+        />
+      </div>
+      <nav>
+        <ul>
+          <li><a href="http://127.0.0.1:5000/">Home</a></li>
+          <li><a href="http://127.0.0.1:5000/about">About Us</a></li>
+          <li><a href="http://127.0.0.1:5000/menu">Menu</a></li>
+          <li><a href="http://127.0.0.1:5000/reservation">Reservation</a></li>
+          <li><a href="http://127.0.0.1:5000/gallery">Gallery</a></li>
+          <li><a href="http://127.0.0.1:5000/contactus">Contact Us</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="card">
+            <div class="card-body text-center">
+              <h5 class="card-title m-b-0">Cart</h5>
+            </div>
+            <div class="table-responsive">
+              <table class="table">
+                <thead class="thead-light">
+                  <tr>
+                    <th scope="col">Item</th>
+                    <th scope="col">Price</th>
+                  </tr>
+                </thead>
+                <tbody class="customtable">
+                  {% for d in data %}
+                  <tr>
+                    <td>{{d[0]}}</td>
+                    <td>{{d[1]}}</td>
+                    <td>
+                      <button class="button2">
+                        <a href="/delete/{{d[0]}}">Delete</a>
+                      </button>
+                    </td>
+                  </tr>
+                  {% endfor %}
+                  <br />
+                </tbody>
+
+                <div class="order-bttn">
+                  <button>
+                    <a href="http://127.0.0.1:5000/placeorder">Place Order</a>
+                  </button>
+                </div>
+                <div class="menubutton">
+                  <button>
+                    <a href="http://127.0.0.1:5000/menu">Menu</a>
+                  </button>
+                </div>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

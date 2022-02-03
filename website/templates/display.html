@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <title>Menu</title>
+    <style>
+
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
+
+
+body {
+    background-color: white;
+    background-size: cover;
+    color:black;
+    font-family: 'PT Sans', sans-serif;
+    
+    
+}
+
+.container {
+    margin-top: 100px
+}
+
+.card {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: white;
+    background-clip: border-box;
+    border: 0px solid transparent;
+    border-radius: 0px
+}
+
+
+.card-body {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    padding: 1.25rem;
+    text-align: center;
+}
+
+.card .card-title {
+    position: relative;
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 10px;
+    font-size: xx-large;
+    
+}
+
+.table {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 1rem;
+    background-color: white;
+}
+
+* {
+    outline: none
+}
+
+.table th,
+.table thead th {
+    font-weight: 500
+}
+
+.table thead th {
+    vertical-align: bottom;
+    border-bottom: 2px solid #dee2e6
+}
+
+.table th {
+    padding: 1rem;
+    vertical-align: top;
+    border-top: 1px solid #dee2e6
+}
+
+.table th,
+.table thead th {
+    font-weight: 500
+}
+
+th {
+    text-align: inherit
+}
+
+.m-b-20 {
+    margin-bottom: 20px;
+    color:black;
+    
+}
+
+.customtable {
+    text-align: center;
+}
+
+.thead-light{
+    text-align: center;
+    background-color: black;
+    color: white;
+}
+
+.button1{
+    background-color: black;
+    border-radius: 8px;
+    padding: 12px 28px;
+    color: white;
+    border: none;
+    text-decoration: none;
+}
+
+.button a:link, a:visited, a:active {
+
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.button2 {
+    background-color: red;
+    border-radius: 8px;
+    padding: 12px 28px;
+    color: white;
+    border: none;
+    text-decoration: none;
+}
+.button3 {
+    background-color: rgb(137, 201, 226);
+    border-radius: 8px;
+    padding: 12px 28px;
+    color: white;
+    border: none;
+    text-decoration: none;
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 550px;
+}    
+    
+
+
+
+
+
+
+
+
+
+    </style>
+
+
+
+</head>
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <h5 class="card-title m-b-0">Reservation Details</h5>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead class="thead-light">
+                                <tr>
+                    
+                                    <th scope="col">Name</th>
+                                    <th scope="col">Contact</th>
+                                    <th scope="col">Table size</th>
+                                    <th scope="col">Date</th>
+                                    <th scope="col">Time</th>
+                                    <th scope="col">Location</th>
+                                </tr>
+                            </thead>
+                            <tbody class="customtable">
+                                {% for user in userDetails %} 
+                                <tr>
+                                        <td>{{user[0]}}</td>
+                                        <td>{{user[1]}}</td>
+                                        <td>{{user[2]}}</td>
+                                        <td>{{user[3]}}</td>
+                                        <td>{{user[4]}}</td>
+                                        <td>{{user[5]}}</td>
+                                        <td>{{user[6]}}</td>
+                                        <!--<td><button class="button1"><a  href="/delete/{{user[0]}}">Delete</a></button></td>
+                                        <td><button class="button2"><a  href="/edit/{{user[0]}}">Update</a></button></td>-->
+                                        
+                                </tr>
+                                {% endfor %}
+                                
+                            </tbody>
+                        </table>
+                        
+
+                              
+                            
+                        
+                        
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

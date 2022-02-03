@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>China Town | Chinese Restaurant</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Playfair Display', serif;
+    background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url("https://images.unsplash.com/photo-1530569112985-108dc2578ec2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjB8fGNoaW5lc2UlMjBmb29kfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60");
+    background-size: cover;
+    background-position: center;
+    font-size: 20px;
+    height: 100vh;
+    background-repeat: no-repeat;
+    
+}
+
+.title {
+    text-align: center;
+    font-size: 40px;
+    color:wheat;
+    font-family: 'Playfair Display', serif;
+    background: rgb(0,0,0,0.5);
+    padding-top: 40px;
+}
+
+
+
+.navbar {
+    
+    height: 150px;
+    line-height: 80px;
+    /*background-color: black;*/
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    justify-content: space-between;
+    padding: 0 40px;
+}
+
+nav {
+    flex: 1;
+    text-align: right;
+}
+
+nav ul {
+    display: inline;
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+a {
+    text-decoration: none;
+    color:wheat;
+    transition: 0.5s all ease;
+}
+
+ul li a:hover {
+    color: red;
+}
+
+
+.content {
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color:wheat;
+    text-align: center;
+
+}
+
+.content h1 {
+    font-size: 50px;
+
+}
+
+.content p {
+    padding-bottom: 20px;
+    font-size: 20px;
+}
+
+button {
+    background: none;
+    border: 1px solid;
+    font-size: 20px;
+    padding: 8px 25px;
+    border-radius: 6px;
+    transition: 0.5s all ease;
+    color: wheat;
+}
+
+button:hover {
+    background:black;
+    color:red;
+
+}
+
+.box {
+    background: rgb(0,0,0,0.5);
+    height: 60vh;
+    padding: 20px;
+}
+
+.about {
+    text-align: center;
+    color: wheat;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: rgb(0,0,0,0.5);
+
+}
+
+.column {
+    float: left;
+    width: 50%;
+    padding: 50px;
+}
+
+.row::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.form {
+    font-size: 60px;
+    padding-left: 50px;
+}
+
+.logo{
+    margin-left: 1px;
+    padding-top: 30px;
+}
+
+.form {
+    font-size: 20px;
+    color: wheat;
+    padding-top: 50px;
+    bottom: 50px;
+}
+
+.contact {
+    position: absolute;
+    top:60%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color:wheat;
+    text-align: center;
+}
+
+.confirm {
+    text-align: center;
+    color: wheat;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: rgb(0,0,0,0.5);
+
+}
+    </style>
+    </head>
+<body>
+    <div class = "navbar">
+        <div class = "logo">
+            <img src = "https://i.pinimg.com/736x/5e/7d/e9/5e7de9a9e7e8fbc0c74b19d26498a077.jpg" width = "100px">
+        </div>
+        <nav>
+            <ul>
+                <li><a href ="http://127.0.0.1:5000/">Home</a></li>
+                <li><a href="http://127.0.0.1:5000/about">About Us</a></li>
+                <li><a href="http://127.0.0.1:5000/menu">Menu</a></li>
+                <li><a href="http://127.0.0.1:5000/reservation">Reservation</a></li>
+                <li><a href="http://127.0.0.1:5000/gallery">Gallery</a></li>
+                <li><a href="http://127.0.0.1:5000/contactus">Contact Us</a></li>
+               
+
+            </ul>
+        </nav>
+    </div>
+    <div class="box">
+        <div class="content">
+            <h1>China Town</h1>
+            <br>
+            <p>Presenting exotic and exquisite Chinese dishes from the country of flavors and cultures.</p>
+            <br>
+            <button><a href = "http://127.0.0.1:5000/menu">Order Now</a></button>                 
+        </div>
+    </div>
+    
+
+    
+    
+    
+</body>
+</html>
